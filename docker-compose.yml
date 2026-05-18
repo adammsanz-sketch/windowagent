@@ -1,0 +1,12 @@
+services:
+  kali-desktop:
+    image: lscr.io/linuxserver/kali-linux:latest
+    container_name: kali_gui
+    privileged: true
+    shm_size: "1gb"
+    ports:
+      - '3000:3000'
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
